@@ -1,0 +1,97 @@
+/* Definindo as cores principais */
+:root {
+    --cor-principal: #5e8271; /* Cor principal */
+    --cor-secundaria: #f6f5da; /* Cor secundária */
+    --cor-branco: #ffffff; /* Cor branca */
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-secundaria);
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-principal);
+}
+
+header a {
+    color: var(--cor-branco);
+}
+
+header a:hover {
+    color: #d1e7dd; /* Cor de hover mais clara */
+}
+
+/* Estilo das seções */
+section {
+    padding: 2rem 0;
+}
+
+h2 {
+    color: var(--cor-principal);
+}
+
+/* Estilo dos botões */
+button {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 0.375rem; /* Bordas arredondadas */
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4a6e5a; /* Cor de hover mais escura */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #4a6e5a; /* Cor do rodapé */
+}
+
+footer a {
+    color: var(--cor-branco);
+}
+
+footer a:hover {
+    color: #d1e7dd; /* Cor de hover mais clara */
+}
+
+/* Estilo dos formulários */
+input, select, textarea {
+    border: 1px solid #ccc;
+    border-radius: 0.375rem; /* Bordas arredondadas */
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box; /* Para incluir padding e border no tamanho total */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--cor-principal);
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo das cartas de modalidades */
+.bg-white {
+    background-color: var(--cor-branco);
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das cartas de modalidades */
+.bg-white {
+    background-color: var(--cor-branco);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.bg-white:hover {
+    transform: translateY(-10px); /* Move a carta para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
