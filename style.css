@@ -82,7 +82,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Estilo das cartas de modalidades */
 .bg-white {
-    background-color: var(--cor-branco);
+     background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes)); /* Gradiente de fundo */
 }
 
 .shadow-lg {
@@ -91,7 +91,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Estilo das cartas de modalidades */
 .bg-white {
-    background-color: var(--cor-branco);
+     background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes)); /* Gradiente de fundo */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
 }
 
