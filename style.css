@@ -20,6 +20,8 @@ header {
     background-color: var(--cor-principal);
 }
 
+/* Resto do CSS permanece o mesmo... */
+
 header a {
     color: var(--cor-branco);
 }
@@ -27,7 +29,6 @@ header a {
 header a:hover {
     color: var(--cor-detalhes); /* Cor de hover mais clara */
 }
-
 
 /* Estilo das seções */
 section {
@@ -50,7 +51,7 @@ button {
 }
 
 button:hover {
-    background-color: #4a6e5a; /* Cor de hover mais escura */
+    background-color: var(--cor-detalhes); /* Cor de hover mais escura */
 }
 
 /* Estilo do rodapé */
@@ -60,13 +61,6 @@ footer {
     padding: 1rem; /* Espaçamento interno */
     text-align: center; /* Centraliza o texto */
 }
-footer a {
-    color: var(--cor-branco);
-}
-
-footer a:hover {
-    color: #d1e7dd; /* Cor de hover mais clara */
-}
 
 /* Estilo dos formulários */
 input, select, textarea {
@@ -75,140 +69,34 @@ input, select, textarea {
     padding: 0.75rem;
     width: 100%;
     box-sizing: border-box; /* Para incluir padding e border no tamanho total */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave */
 }
 
 input:focus, select:focus, textarea:focus {
     border-color: var(--cor-principal);
+    box-shadow: 0 0 5px var(--cor-principal); /* Sombra ao focar */
     outline: none; /* Remove o contorno padrão */
 }
 
 /* Estilo das cartas de modalidades */
 .bg-white {
-    background-color: var(--cor-principal);
-}
-
-.shadow-lg {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo das cartas de modalidades */
-.bg-white {
-    background-color: var(--cor-principal);
+    background-color: var(--cor-branco);
+    border-radius: 0.5rem; /* Bordas arredondadas */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-}
-
-.bg-white:hover {
-    transform: translateY(-10px); /* Move a carta para cima */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
-}
-
-
-
-/* Estilos da seção Sobre Mim */
-.sobre-mim {
-    padding: 2rem;
-    text-align: center; /* Centraliza o texto */
-}
-
-.imagem-sobre-mim {
-    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 0.5rem; /* Bordas arredondadas */
-    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
-}
-
-/* Estilos do carrossel */
-.carrossel {
-    position: relative;
-    max-width: 50%; /* Permite que o carrossel ocupe toda a largura disponível */
-    margin: auto; /* Centraliza o carrossel */
-    overflow: hidden; /* Esconde as imagens que estão fora do contêiner */
-    border: 2px solid var(--cor-principal); /* Adiciona uma borda ao carrossel */
-    border-radius: 0.5rem; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
     padding: 1rem; /* Espaçamento interno */
 }
 
-.slides {
-    display: flex; /* Alinha as imagens em linha */
-    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+.bg-white:hover {
+    transform: translateY(-5px); /* Move a carta para cima ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
-.imagem-modalidade {
-    max-width: 50%; /* Garante que a imagem não exceda 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    flex-shrink: 0; /* Impede que as imagens encolham */
-}
-/* Estilos da seção de capa */
-.capa-header {
-    display: flex; /* Usar flexbox para alinhar a imagem e o texto lado a lado */
-    align-items: center; /* Centraliza verticalmente os itens */
-    background-color: var(--cor-secundaria); /* Cor de fundo */
-    padding: 2rem; /* Espaçamento interno */
+/* Estilo adicional para melhorar a interação com o background */
+.bg-white {
+    border: 1px solid var(--cor-secundaria); /* Borda com a cor secundária */
 }
 
-.capa {
-    max-width: 50%; /* Limita a largura da imagem a 50% do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 0.5rem; /* Bordas arredondadas */
-    margin-right: 2rem; /* Espaçamento à direita da imagem */
-}
-
-.capa-descricao {
-    max-width: 50%; /* Limita a largura do texto a 50% do contêiner */
-}
-
-.capa-titulo {
-    font-size: 1.5rem; /* Tamanho do título */
-    font-weight: bold; /* Negrito */
-    margin-bottom: 1rem; /* Espaçamento abaixo do título */
-}
-
-.capa-descricao p {
-    color: var(--cor-preto); /* Cor do texto */
-    line-height: 1.5; /* Espaçamento entre linhas */
-}
-
-/* Estilos dos botões de navegação */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transform: translateY(-50%);
-}
-
-.prev {
-    left: 10px; /* Posição do botão anterior */
-}
-
-.next {
-    right: 10px; /* Posição do botão seguinte */
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Escurece o botão ao passar o mouse */
-}
-
-.logo {
-    width: 150px; /* Aumentar a logo */
-    height: auto; /* Mantém a proporção */
-}
-
-
-.capa {
-    max-width: 40%; /* Reduz tamanho da capa */
-    height: auto;
-}
-
-section:nth-child(even) {
-    background-color: var(--cor-secundaria);
-}
-
-section:nth-child(odd) {
-    background-color: var(--cor-principal);
+.bg-white:hover {
+    border-color: var(--cor-principal); /* Muda a borda ao passar o mouse */
 }
