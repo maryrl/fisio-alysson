@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="https://maryrl.github.io/fisio-alysson/style.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que o caminho está correto -->
 </head>
 <body class="bg-gray-100 text-gray-800">
-<link rel="stylesheet" href="style.css">
   <!-- Menu -->
   <header class="bg-green-400 text-white sticky top-0 shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -25,10 +25,12 @@
       </nav>
     </div>
   </header>
-<header>
-        <h1>Bem-vindo ao Meu Site</h1>
-        <img src="capa-alysson.jpg" alt="Capa do Site" class="capa">
-    </header>
+
+  <!-- Seção de Capa -->
+  <header>
+    <img src="capa-alysson.jpg" alt="Capa do Site" class="capa">
+  </header>
+
   <!-- Seção Sobre Mim -->
   <section id="about" class="bg-white py-12 lg:py-24">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center">
@@ -58,27 +60,27 @@
           <p class="text-gray-600">Técnicas manuais para alívio de dores e tensão muscular.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-semibold mb-4">Reabilitação Neurológica</h3>
+          <h3 class ="text-xl font-semibold mb-4">Reabilitação Neurológica</h3>
           <p class="text-gray-600">Tratamento especializado para distúrbios neurológicos.</p>
         </div>
       </div>
+      <div class="carrossel mt-8">
+        <div class="slides">
+          <img src="modalidade1.jpg" alt="Modalidade 1" class="imagem-modalidade">
+          <img src="modalidade2.jpg" alt="Modalidade 2" class="imagem-modalidade">
+          <img src="modalidade3.jpg" alt="Modalidade 3" class="imagem-modalidade">
+          <img src="modalidade4.jpg" alt="Modalidade 4" class="imagem-modalidade">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
     </div>
-    <div class="carrossel">
-                <div class="slides">
-                    <img src="modalidade1.jpg" alt="Modalidade 1" class="imagem-modalidade">
-                    <img src="modalidade2.jpg" alt="Modalidade 2" class="imagem-modalidade">
-                    <img src="modalidade3.jpg" alt="Modalidade 3" class="imagem-modalidade">
-                    <img src="modalidade4.jpg" alt="Modalidade 4" class="imagem-modalidade">
-                </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
   </section>
 
   <!-- Seção Agendar Consulta -->
   <section id="agendar" class="bg-white py-12 lg:py-24">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text -3xl font-extrabold text-gray-900 mb-8">Agendar Consulta</h2>
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Agendar Consulta</h2>
       <form id="form-consulta" class="space-y-6">
         <input type="text" class="w-full p-3 border border-gray-300 rounded-md" id="nome" placeholder="Nome" required>
         <select class="w-full p-3 border border-gray-300 rounded-md" id="modalidade" required>
@@ -93,7 +95,9 @@
       </form>
     </div>
   </section>
+
   <script src="index.js"></script>
+  
   <footer class="bg-green-600 text-white py-8">
     <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
       <p class="text-xl font-semibold mb-4">Entre em Contato</p>
@@ -115,5 +119,31 @@
     </div>
   </footer>
 
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("imagem-modalidade");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex - 1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
+    }
+
+    function moveSlide(n) {
+      slideIndex += n;
+      let slides = document.getElementsByClassName("imagem-modalidade");
+      if (slideIndex > slides .length) {slideIndex = 1}
+      if (slideIndex < 1) {slideIndex = slides.length}
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex - 1].style.display = "block";  
+    }
+  </script>
 </body>
 </html>
