@@ -100,12 +100,34 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
-/* Estilo da imagem de capa */
+/* Estilos da seção de capa */
+.capa-header {
+    display: flex; /* Usar flexbox para alinhar a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente os itens */
+    background-color: var(--cor-secundaria); /* Cor de fundo */
+    padding: 2rem; /* Espaçamento interno */
+}
+
 .capa {
-     width: 50%; /* Faz a imagem ocupar toda a largura do contêiner */
+    max-width: 50%; /* Limita a largura da imagem a 50% do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 0.5rem; /* Bordas arredondadas */
-    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+    margin-right: 2rem; /* Espaçamento à direita da imagem */
+}
+
+.capa-descricao {
+    max-width: 50%; /* Limita a largura do texto a 50% do contêiner */
+}
+
+.capa-titulo {
+    font-size: 1.5rem; /* Tamanho do título */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 1rem; /* Espaçamento abaixo do título */
+}
+
+.capa-descricao p {
+    color: var(--cor-preto); /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
 }
 
 /* Estilos da seção Sobre Mim */
