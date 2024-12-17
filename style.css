@@ -121,17 +121,15 @@ input:focus, select:focus, textarea:focus {
     margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
 }
 
-/* Estilos das modalidades */
-.modalidades {
-    padding: 2rem;
-}
-
 /* Estilos do carrossel */
 .carrossel {
     position: relative;
-    max-width: 600px; /* Largura máxima do carrossel */
-    margin : auto; /* Centraliza o carrossel */
+    max-width: 100%; /* Permite que o carrossel ocupe toda a largura disponível */
+    margin: auto; /* Centraliza o carrossel */
     overflow: hidden; /* Esconde as imagens que estão fora do contêiner */
+    border: 2px solid var(--cor-principal); /* Adiciona uma borda ao carrossel */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
 }
 
 .slides {
@@ -140,7 +138,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .imagem-modalidade {
-    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    max-width: 100%; /* Garante que a imagem não exceda 100% da largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     flex-shrink: 0; /* Impede que as imagens encolham */
 }
