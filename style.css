@@ -84,7 +84,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Estilo das cartas de modalidades */
 .bg-white {
-     background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes)); /* Gradiente de fundo */
+    background-color: var(--cor-principal);
 }
 
 .shadow-lg {
@@ -93,7 +93,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Estilo das cartas de modalidades */
 .bg-white {
-     background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes)); /* Gradiente de fundo */
+    background-color: var(--cor-principal);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
 }
 
@@ -120,7 +120,7 @@ input:focus, select:focus, textarea:focus {
 /* Estilos do carrossel */
 .carrossel {
     position: relative;
-    max-width: 100%; /* Permite que o carrossel ocupe toda a largura disponível */
+    max-width: 50%; /* Permite que o carrossel ocupe toda a largura disponível */
     margin: auto; /* Centraliza o carrossel */
     overflow: hidden; /* Esconde as imagens que estão fora do contêiner */
     border: 2px solid var(--cor-principal); /* Adiciona uma borda ao carrossel */
@@ -134,7 +134,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .imagem-modalidade {
-    max-width: 100%; /* Garante que a imagem não exceda 100% da largura do contêiner */
+    max-width: 50%; /* Garante que a imagem não exceda 100% da largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     flex-shrink: 0; /* Impede que as imagens encolham */
 }
