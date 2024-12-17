@@ -95,3 +95,81 @@ input:focus, select:focus, textarea:focus {
     transform: translateY(-10px); /* Move a carta para cima */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes));
+    color: var(--cor-preto);
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilo da imagem de capa */
+.capa {
+    width: 100%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos da seção Sobre Mim */
+.sobre-mim {
+    padding: 2rem;
+    text-align: center; /* Centraliza o texto */
+}
+
+.imagem-sobre-mim {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+}
+
+/* Estilos das modalidades */
+.modalidades {
+    padding: 2rem;
+}
+
+/* Estilos do carrossel */
+.carrossel {
+    position: relative;
+    max-width: 600px; /* Largura máxima do carrossel */
+    margin : auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde as imagens que estão fora do contêiner */
+}
+
+.slides {
+    display: flex; /* Alinha as imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+}
+
+.imagem-modalidade {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    flex-shrink: 0; /* Impede que as imagens encolham */
+}
+
+/* Estilos dos botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px; /* Posição do botão anterior */
+}
+
+.next {
+    right: 10px; /* Posição do botão seguinte */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Escurece o botão ao passar o mouse */
+}
