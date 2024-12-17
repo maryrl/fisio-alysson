@@ -55,9 +55,11 @@ button:hover {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #4a6e5a; /* Cor do rodapé */
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes)); /* Gradiente no rodapé */
+    color: var(--cor-branco); /* Cor do texto no rodapé */
+    padding: 1rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
 }
-
 footer a {
     color: var(--cor-branco);
 }
@@ -136,34 +138,6 @@ input:focus, select:focus, textarea:focus {
     height: auto; /* Mantém a proporção da imagem */
     flex-shrink: 0; /* Impede que as imagens encolham */
 }
-
-/* Estilos dos botões de navegação */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transform: translateY(-50%);
-}
-
-.prev {
-    left: 10px; /* Posição do botão anterior */
-}
-
-.next {
-    right: 10px; /* Posição do botão seguinte */
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Escurece o botão ao passar o mouse */
-}
-
-
 /* Estilos da seção de capa */
 .capa-header {
     display: flex; /* Usar flexbox para alinhar a imagem e o texto lado a lado */
@@ -193,3 +167,30 @@ input:focus, select:focus, textarea:focus {
     color: var(--cor-preto); /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
 }
+
+/* Estilos dos botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px; /* Posição do botão anterior */
+}
+
+.next {
+    right: 10px; /* Posição do botão seguinte */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Escurece o botão ao passar o mouse */
+}
+
