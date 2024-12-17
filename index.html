@@ -25,7 +25,10 @@
       </nav>
     </div>
   </header>
-
+<header>
+        <h1>Bem-vindo ao Meu Site</h1>
+        <img src="capa-alysson.jpg" alt="Capa do Site" class="capa">
+    </header>
   <!-- Seção Sobre Mim -->
   <section id="about" class="bg-white py-12 lg:py-24">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center">
@@ -60,6 +63,16 @@
         </div>
       </div>
     </div>
+    <div class="carrossel">
+                <div class="slides">
+                    <img src="modalidade1.jpg" alt="Modalidade 1" class="imagem-modalidade">
+                    <img src="modalidade2.jpg" alt="Modalidade 2" class="imagem-modalidade">
+                    <img src="modalidade3.jpg" alt="Modalidade 3" class="imagem-modalidade">
+                    <img src="modalidade4.jpg" alt="Modalidade 4" class="imagem-modalidade">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
   </section>
 
   <!-- Seção Agendar Consulta -->
