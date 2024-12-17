@@ -107,8 +107,10 @@ body {
 
 /* Estilo da imagem de capa */
 .capa {
-    width: 100%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+     width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
 }
 
 /* Estilos da seção Sobre Mim */
