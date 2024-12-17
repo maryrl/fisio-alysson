@@ -1,15 +1,18 @@
 /* Definindo as cores principais */
 :root {
-    --cor-principal: #5e8271; /* Cor principal */
-    --cor-secundaria: #f6f5da; /* Cor secundária */
-    --cor-branco: #ffffff; /* Cor branca */
+    --cor-principal: #708877; /* Cor principal (VERDE MENTA) */
+    --cor-secundaria: #E2D3BC; /* Cor secundária (BEGE) */
+    --cor-preto: #111A17; /* Cor das fontes (PRETO) */
+    --cor-detalhes: #718878; /* Detalhes (VERDE CLARO) */
 }
 
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--cor-secundaria);
-    color: #333;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes)); /* Gradiente de fundo */
+    color: var(--cor-preto);
+    min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    margin: 0; /* Remove margens padrão */
 }
 
 /* Estilo do cabeçalho */
@@ -22,8 +25,9 @@ header a {
 }
 
 header a:hover {
-    color: #d1e7dd; /* Cor de hover mais clara */
+    color: var(--cor-detalhes); /* Cor de hover mais clara */
 }
+
 
 /* Estilo das seções */
 section {
