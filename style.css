@@ -100,15 +100,6 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria), var(--cor-detalhes));
-    color: var(--cor-preto);
-    min-height: 100vh;
-    margin: 0;
-}
-
 /* Estilo da imagem de capa */
 .capa {
      width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
