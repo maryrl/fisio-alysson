@@ -118,22 +118,24 @@ section:nth-child(odd) {
 /* Estilização da Seção de Capa */
 .capa-header {
     background-color: #708877; /* Cor de fundo */
-    padding: 0%; /* Espaçamento interno para melhor visualização */
+    padding: 20px; /* Espaçamento interno para melhor visualização */
     display: flex; /* Organiza o conteúdo lado a lado */
     align-items: center; /* Alinha verticalmente */
-    gap: 40px; /* Espaço entre imagem e descrição */
+    gap: 20px; /* Espaço entre imagem e descrição */
 }
 
 .capa {
-    max-width: 100px; /* Reduz tamanho máximo da imagem */
+    max-width: 300px; /* Reduz tamanho máximo da imagem */
     height: auto; /* Mantém proporção */
-    border-radius: 2px; /* Bordas levemente arredondadas */
-    max-height: 100%; /* Faz a imagem ocupar toda a altura disponível */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    top: auto;
+    
 }
 
 .capa-descricao {
     color: #ffffff; /* Cor do texto para contraste */
-    max-width: 800px; /* Largura máxima do conteúdo */
+    max-width: 600px; /* Largura máxima do conteúdo */
+    text-align: center;
 }
 
 .capa-titulo {
@@ -151,19 +153,11 @@ section:nth-child(odd) {
     }
 
     .capa-header img.capa {
-        width: 46.3px;
-        top:110px;
-        justify-items: auto;
-        object-fit: cover;
-        position: absolute; /* Posiciona a imagem de forma absoluta dentro do contêiner */
-        left: 0;
-    }
-    .capa-descricao {
-        color: #ffffff; /* Cor do texto para contraste */
-        max-width: 5px; /* Largura máxima do conteúdo */
-        text-align: center;
-        width: 350px;
-        overflow: hidden;
+        width: 80%;
+        text-align: right;
+        top:auto;
+        position: inherit;
+    
     }
 }
 
@@ -265,40 +259,3 @@ button.prev:hover, button.next:hover {
 .bg-custom-footer {
     background-color: #708877; /* Cor de fundo do footer */
 }
-
-.menu {
-    position: fixed; /* Fixa a barra de menu no topo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* Ajuste a altura conforme necessário */
-    z-index: 10; /* Garante que fique acima de outros elementos */
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    .capa-header {
-        flex-direction: column; /* Alinha imagem e texto em coluna */
-        gap: 0px; /* Reduz o espaçamento entre elementos */
-        
-        
-    }
-
-    .capa {
-        text-align: center;
-        top: 110; 
-        width: 46.3%; /* Ajuste a largura conforme necessário */
-        
-    }
-
-    .capa-descricao {
-        max-width: 100%; /* Permite que o texto ocupe toda a largura da tela */
-        text-align: center; /* Centraliza o texto */
-    }
-
-    .capa-titulo {
-        font-size: 1.9rem; /* Ajusta o tamanho do título para telas menores */
-    }
-}
-
-
